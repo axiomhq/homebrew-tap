@@ -8,15 +8,15 @@ class Axiom < Formula
 
   if OS.mac?
     url "https://github.com/axiomhq/cli/releases/download/v0.1.0/axiom_0.1.0_darwin_amd64.tar.gz"
-    sha256 "b02afd0e4456910c6eff5f329e76d23838806e90773380434c161c5bf41ef5d6"
+    sha256 "316bb69b369cb25258d632f2fcffb2b6ed770c92799e7bf4b96fa87a8346fd6a"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/axiomhq/cli/releases/download/v0.1.0/axiom_0.1.0_linux_amd64.tar.gz"
-    sha256 "ef5a144407b73c20dcb6076152873c551009566e117777015e7b0eb5df30585e"
+    sha256 "a186ecfd061199144e9be01bac9e7e22300c6bd3ae0952428d6fc909f7accc96"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/axiomhq/cli/releases/download/v0.1.0/axiom_0.1.0_linux_arm64.tar.gz"
-    sha256 "ccd96bffccd06513601eefbd5ff67ff096f11fecf07ea2859ef95331a8606d86"
+    sha256 "454436c68649707ec5d867a5e7c5144bcbe1d54c1dead9fa8e72c398287c03be"
   end
 
   def install
