@@ -5,21 +5,21 @@
 class Axiom < Formula
   desc "Powerful log analytics from the comfort of your command-line"
   homepage "https://axiom.co"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/axiomhq/cli/releases/download/v0.1.2/axiom_0.1.2_darwin_amd64.tar.gz"
-    sha256 "1aac61c79ec1772c5c8fcd0bf08413a8f57090c14b41f41365952e0a3f287de6"
+    url "https://github.com/axiomhq/cli/releases/download/v0.1.3/axiom_0.1.3_darwin_amd64.tar.gz"
+    sha256 "ad9c28115598aa6e475155418e28f704c4e5b4a1070e3c1363488f6392f971e3"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/axiomhq/cli/releases/download/v0.1.2/axiom_0.1.2_linux_amd64.tar.gz"
-    sha256 "f8d3bf2a05b66889c53f7e95c83ccb720718c1b269be2c71c9528d2b7d81fd53"
+    url "https://github.com/axiomhq/cli/releases/download/v0.1.3/axiom_0.1.3_linux_amd64.tar.gz"
+    sha256 "209e5414202f2da5b4706c908e99edc26cf6df6a6c0b4bc3fad11c4a8cae85cb"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/axiomhq/cli/releases/download/v0.1.2/axiom_0.1.2_linux_arm64.tar.gz"
-    sha256 "273c6fe562544248e9bfecd35ef2a6c8477ad43b7bd1d260a62e7c092624b987"
+    url "https://github.com/axiomhq/cli/releases/download/v0.1.3/axiom_0.1.3_linux_arm64.tar.gz"
+    sha256 "9bd3720e7e48c0b6b7cf4e725d64927e0ee3d271e522439861f10e2e2fe5d5e1"
   end
 
   def install
