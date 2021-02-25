@@ -5,21 +5,21 @@
 class Axiom < Formula
   desc "Powerful log analytics from the comfort of your command-line"
   homepage "https://axiom.co"
-  version "0.1.7"
+  version "0.1.8"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/axiomhq/cli/releases/download/v0.1.7/axiom_0.1.7_darwin_amd64.tar.gz"
-    sha256 "9195ce6adcfbc6c0010a5c9183a2a60adce9259c114f42a9289eae84fe44958b"
+    url "https://github.com/axiomhq/cli/releases/download/v0.1.8/axiom_0.1.8_darwin_amd64.tar.gz"
+    sha256 "72814e0f804f88eb2562d68ddeea6ea4210c73110fbfa10106fba6b39d754210"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/axiomhq/cli/releases/download/v0.1.7/axiom_0.1.7_linux_amd64.tar.gz"
-    sha256 "9bd8af9e4d068a0fab73388a532996a306d2fcb24548ae845d94c51e663503d5"
+    url "https://github.com/axiomhq/cli/releases/download/v0.1.8/axiom_0.1.8_linux_amd64.tar.gz"
+    sha256 "819ced68f22ebe5a037324f9459817a09886d9b91e709ce1b736a285a878d6ec"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/axiomhq/cli/releases/download/v0.1.7/axiom_0.1.7_linux_arm64.tar.gz"
-    sha256 "487d7df9e20946ede14a261322663ee3fa7dfafa28a551c4562a68ef3fd8ce42"
+    url "https://github.com/axiomhq/cli/releases/download/v0.1.8/axiom_0.1.8_linux_arm64.tar.gz"
+    sha256 "e00a2b3d1f7caef5869e972a69fac8cfc96d69619b7b290c407a16063102383f"
   end
 
   def install
