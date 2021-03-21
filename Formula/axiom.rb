@@ -5,25 +5,29 @@
 class Axiom < Formula
   desc "Powerful log analytics from the comfort of your command-line"
   homepage "https://axiom.co"
-  version "0.1.12"
+  version "0.1.13"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/axiomhq/cli/releases/download/v0.1.12/axiom_0.1.12_darwin_amd64.tar.gz"
-    sha256 "4ff12ab3ff063a8d3b0c22956e915a32d283e34d997449a4f4b0a66750e9472b"
+    url "https://github.com/axiomhq/cli/releases/download/v0.1.13/axiom_0.1.13_darwin_amd64.tar.gz"
+    sha256 "56ea2d8455892bb08d2c372279143442ac7d6dab8d7834717bb06014a2d3cece"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/axiomhq/cli/releases/download/v0.1.12/axiom_0.1.12_darwin_arm64.tar.gz"
-    sha256 "eeb0493fe7434a33c29df7388b02964c7c8f72337841149c0bf414af62130068"
+    url "https://github.com/axiomhq/cli/releases/download/v0.1.13/axiom_0.1.13_darwin_arm64.tar.gz"
+    sha256 "8d32b673394c81506dea3bb20d62a0f60f5c5573db1f449a92c595dea21d580b"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/axiomhq/cli/releases/download/v0.1.12/axiom_0.1.12_linux_amd64.tar.gz"
-    sha256 "07eca3bc113042ee1763ea6877a7321c92f8338b233e1eaa67c2761c30ab7878"
+    url "https://github.com/axiomhq/cli/releases/download/v0.1.13/axiom_0.1.13_linux_amd64.tar.gz"
+    sha256 "a5e6a2f186b3a6b8a483bfd97fc171cab51d8524991a7da743ba31241c252e14"
+  end
+  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+    url "https://github.com/axiomhq/cli/releases/download/v0.1.13/axiom_0.1.13_linux_armv6.tar.gz"
+    sha256 "898f2ac21e3ec879c41983d38c9ffa8616e3c368b7daa8e2a36e83829cd718b2"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/axiomhq/cli/releases/download/v0.1.12/axiom_0.1.12_linux_arm64.tar.gz"
-    sha256 "237cb995453fa7f42c8b4c4c0be2e9cc72df15638aab692028dfa74b0c08ea64"
+    url "https://github.com/axiomhq/cli/releases/download/v0.1.13/axiom_0.1.13_linux_arm64.tar.gz"
+    sha256 "4017eac43b6646caeb1ca3bd29a8d84a688b83f07904e78908ea2ece949d12ae"
   end
 
   def install
