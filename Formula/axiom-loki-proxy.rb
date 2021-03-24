@@ -33,4 +33,8 @@ class AxiomLokiProxy < Formula
   def install
     bin.install "axiom-loki-proxy"
   end
+
+  test do
+    nil
+  end
 end
