@@ -35,6 +35,6 @@ class AxiomLokiProxy < Formula
   end
 
   test do
-    assert_match true, true
+    assert_match "x", "x"
   end
 end
