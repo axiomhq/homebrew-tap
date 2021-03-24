@@ -18,6 +18,8 @@ jobs:
           - ubuntu-latest
           # - macos-latest
         formula:
+          - axiom-loki-proxy
+          - axiom-syslog-proxy
           - axiom
     runs-on: ${{ matrix.os }}
     steps:
