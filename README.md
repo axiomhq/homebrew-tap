@@ -29,8 +29,8 @@ There are two ways to use the formulas in this repository.
 Install the tap first and install the formula like any other core formula.
 
 ```shell
-$ brew tap axiomhq/tap
-$ brew install <formula>
+ brew tap axiomhq/tap
+ brew install <formula>
 ```
 
 ### Direct installation
@@ -38,7 +38,7 @@ $ brew install <formula>
 Directly install the formula from the tap before installing the tap first.
 
 ```shell
-$ brew install axiomhq/tap/<formula>
+ brew install axiomhq/tap/<formula>
 ```
 
 ## Contributing
