@@ -55,5 +55,5 @@ repository declares. Check the `<formula>.rb` files.
 
 <!-- Badges -->
 
-[brew_workflow]: https://github.com/axiomhq/homebrew-tap/actions?query=workflow%3Abrew
+[brew_workflow]: https://github.com/axiomhq/homebrew-tap/actions/workflows/brew.yml
 [brew_workflow_badge]: https://img.shields.io/github/workflow/status/axiomhq/homebrew-tap/brew?style=flat-square
