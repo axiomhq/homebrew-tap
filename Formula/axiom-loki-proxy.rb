@@ -5,33 +5,33 @@
 class AxiomLokiProxy < Formula
   desc "Loki powered log ingestion by proxy for Axiom"
   homepage "https://axiom.co"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/axiomhq/axiom-loki-proxy/releases/download/v0.2.0/axiom-loki-proxy_0.2.0_darwin_amd64.tar.gz"
-      sha256 "adbb941f50a08e76c5c3d9fcf3aafffa69a7dd2566ab6a29046826dd4239e8ce"
+      url "https://github.com/axiomhq/axiom-loki-proxy/releases/download/v0.3.0/axiom-loki-proxy_0.3.0_darwin_amd64.tar.gz"
+      sha256 "3c5ab1896189b04685790d3f75ace613e1eb0f5e49728d8819fa8854d9e3156d"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/axiomhq/axiom-loki-proxy/releases/download/v0.2.0/axiom-loki-proxy_0.2.0_darwin_arm64.tar.gz"
-      sha256 "2e28b1dbdbddc43f17607b68a57fbb261322033e7b81b75d61aa665bfca5f079"
+      url "https://github.com/axiomhq/axiom-loki-proxy/releases/download/v0.3.0/axiom-loki-proxy_0.3.0_darwin_arm64.tar.gz"
+      sha256 "d533dd7fe63d0de842f7180b5a44da931c5adefdc705dc09588081144cfda94e"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/axiomhq/axiom-loki-proxy/releases/download/v0.2.0/axiom-loki-proxy_0.2.0_linux_amd64.tar.gz"
-      sha256 "9095231cb0ec3d84e9dc9acb00eb20b2e5aea3390b22fc39dacf0c2952b76c9c"
+      url "https://github.com/axiomhq/axiom-loki-proxy/releases/download/v0.3.0/axiom-loki-proxy_0.3.0_linux_amd64.tar.gz"
+      sha256 "84a9e4412ab429473e8dc5184202c441426a290a63452494d2376c0b96f7ccf6"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/axiomhq/axiom-loki-proxy/releases/download/v0.2.0/axiom-loki-proxy_0.2.0_linux_armv6.tar.gz"
-      sha256 "8702e9b2bd3576b283713c57ee3893939136562b394c94b80ddd79fe3a1d7225"
+      url "https://github.com/axiomhq/axiom-loki-proxy/releases/download/v0.3.0/axiom-loki-proxy_0.3.0_linux_armv6.tar.gz"
+      sha256 "4fab7f992674ed7da72e2d76c8e5dfe548a57488bab02e9abd41e5b6efd8ec50"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/axiomhq/axiom-loki-proxy/releases/download/v0.2.0/axiom-loki-proxy_0.2.0_linux_arm64.tar.gz"
-      sha256 "288e37a5ed716ec8fe65959fa3ec27976a52d403089f3e8bdcdead92c18afe4a"
+      url "https://github.com/axiomhq/axiom-loki-proxy/releases/download/v0.3.0/axiom-loki-proxy_0.3.0_linux_arm64.tar.gz"
+      sha256 "8f2603fc73568d4a35dc3fd2d4aed63b4c6ad40c6307597f91ef58bbc4d7839e"
     end
   end
 
