@@ -5,33 +5,33 @@
 class Axiom < Formula
   desc "Powerful log analytics from the comfort of your command-line"
   homepage "https://axiom.co"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/axiomhq/cli/releases/download/v0.4.0/axiom_0.4.0_darwin_amd64.tar.gz"
-      sha256 "0f3c1e5dc5f3bace2b5858d00878749ada7a72db743ac11f2ca50522fa333688"
+      url "https://github.com/axiomhq/cli/releases/download/v0.4.1/axiom_0.4.1_darwin_amd64.tar.gz"
+      sha256 "de2ef980e5336a86584f1ee5a97c4e02dd67451e4f032b363b219f6e46926983"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/axiomhq/cli/releases/download/v0.4.0/axiom_0.4.0_darwin_arm64.tar.gz"
-      sha256 "38f240f12bf85b365794af108b1bb42cc7a0467f01c4117aca478749b9cd6059"
+      url "https://github.com/axiomhq/cli/releases/download/v0.4.1/axiom_0.4.1_darwin_arm64.tar.gz"
+      sha256 "1c64a7691f635806bfa2157cfcc019e38ead56aefbd5766738c33116486de098"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/axiomhq/cli/releases/download/v0.4.0/axiom_0.4.0_linux_amd64.tar.gz"
-      sha256 "dcbceb2d70a960122099dfb5ad7b4ae95b4aee7aebc2d719cedefff78126ad8d"
+      url "https://github.com/axiomhq/cli/releases/download/v0.4.1/axiom_0.4.1_linux_amd64.tar.gz"
+      sha256 "0bf95c8d39b5823ebf53237a52d21203a4d8cb80c3822e34d2a6c9c03316356e"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/axiomhq/cli/releases/download/v0.4.0/axiom_0.4.0_linux_armv6.tar.gz"
-      sha256 "6f6abc244336b42211de0c8aae3f3247b74928b2061cc027920df8c2a8f2feee"
+      url "https://github.com/axiomhq/cli/releases/download/v0.4.1/axiom_0.4.1_linux_armv6.tar.gz"
+      sha256 "12ff09e641945de24a243f3aa318133a9df815dd4e099d8542b1325ee3eacbdc"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/axiomhq/cli/releases/download/v0.4.0/axiom_0.4.0_linux_arm64.tar.gz"
-      sha256 "74d2fb8bdc1ec24ddaad393e4e1bfcd7b7b38d11981da8571b7d63230062a321"
+      url "https://github.com/axiomhq/cli/releases/download/v0.4.1/axiom_0.4.1_linux_arm64.tar.gz"
+      sha256 "dfb5a8a37358bee505be48ea5fd9d0c59eb65d0323eb881ffeb21b783ec60637"
     end
   end
 
