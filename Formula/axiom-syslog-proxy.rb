@@ -5,33 +5,33 @@
 class AxiomSyslogProxy < Formula
   desc "Syslog ingestion by proxy for Axiom"
   homepage "https://axiom.co"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/axiomhq/axiom-syslog-proxy/releases/download/v0.3.0/axiom-syslog-proxy_0.3.0_darwin_amd64.tar.gz"
-      sha256 "bd0fe7797a6d2ae92b0cfee782f3d2f291ca2fa70fe79f423927859d43fc5e65"
+      url "https://github.com/axiomhq/axiom-syslog-proxy/releases/download/v0.4.0/axiom-syslog-proxy_0.4.0_darwin_amd64.tar.gz"
+      sha256 "7e5561164121591b3b7b2c9868e341beb8f8cd3e162608a35999835acd647d79"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/axiomhq/axiom-syslog-proxy/releases/download/v0.3.0/axiom-syslog-proxy_0.3.0_darwin_arm64.tar.gz"
-      sha256 "f3f4cd05c03f826ba4589209293f8c599261b07954eb9de5db8ea8b8f0613e83"
+      url "https://github.com/axiomhq/axiom-syslog-proxy/releases/download/v0.4.0/axiom-syslog-proxy_0.4.0_darwin_arm64.tar.gz"
+      sha256 "e0ffe72cc8c09a85e80a632759ee5bd6ce0bc9cf989f27a90ebd9446c54c29f5"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/axiomhq/axiom-syslog-proxy/releases/download/v0.3.0/axiom-syslog-proxy_0.3.0_linux_amd64.tar.gz"
-      sha256 "c62c7b93699986b5c7077dd021350901e302398927ef4a833ac9eeacde502d1b"
-    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/axiomhq/axiom-syslog-proxy/releases/download/v0.3.0/axiom-syslog-proxy_0.3.0_linux_armv6.tar.gz"
-      sha256 "8f11704cb4e41a651b3378082ebf78aac9617a34656eb22a217755098f403f95"
+      url "https://github.com/axiomhq/axiom-syslog-proxy/releases/download/v0.4.0/axiom-syslog-proxy_0.4.0_linux_armv6.tar.gz"
+      sha256 "9be1db0a81a4634de72f0d9d914bd2d496122315791d2d3ab1daf6dbd13a20ee"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/axiomhq/axiom-syslog-proxy/releases/download/v0.4.0/axiom-syslog-proxy_0.4.0_linux_amd64.tar.gz"
+      sha256 "8724aeb8c4850c28d101822a4ab29e9f5390f5e45e03f0a96753fd123676f3d7"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/axiomhq/axiom-syslog-proxy/releases/download/v0.3.0/axiom-syslog-proxy_0.3.0_linux_arm64.tar.gz"
-      sha256 "f5c9057995e0dca70d69e5fe010ba7fae2541d032efc252ccca4e1af8cb2bad3"
+      url "https://github.com/axiomhq/axiom-syslog-proxy/releases/download/v0.4.0/axiom-syslog-proxy_0.4.0_linux_arm64.tar.gz"
+      sha256 "055e7910efd96d2e0fee2d19e0bee1ddca5919daee4d20c9a0385bed9bb4af2f"
     end
   end
 
