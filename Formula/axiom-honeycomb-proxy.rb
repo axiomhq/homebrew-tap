@@ -5,33 +5,33 @@
 class AxiomHoneycombProxy < Formula
   desc "Honeycomb compatible log forwarding and multiplexing proxy for Axiom"
   homepage "https://axiom.co"
-  version "0.5.0"
+  version "0.6.0"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/axiomhq/axiom-honeycomb-proxy/releases/download/v0.5.0/axiom-honeycomb-proxy_0.5.0_darwin_arm64.tar.gz"
-      sha256 "504b9304436a529da5a2dd619a1202d5f2595f4b3a3c4a14caa116916140c5dd"
+      url "https://github.com/axiomhq/axiom-honeycomb-proxy/releases/download/v0.6.0/axiom-honeycomb-proxy_0.6.0_darwin_arm64.tar.gz"
+      sha256 "2e2da9f40ac0ef5d6d7ea520687517df1c1961634db5eddf3af484bbf332a4e4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/axiomhq/axiom-honeycomb-proxy/releases/download/v0.5.0/axiom-honeycomb-proxy_0.5.0_darwin_amd64.tar.gz"
-      sha256 "772ab5ca9ffbae24902a63ecdbf58076cddce14c386f92d72223e638c1715be0"
+      url "https://github.com/axiomhq/axiom-honeycomb-proxy/releases/download/v0.6.0/axiom-honeycomb-proxy_0.6.0_darwin_amd64.tar.gz"
+      sha256 "03633865a64794a989b8e38b19416f6244fcc94d7ff2990f9981c272017528b7"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/axiomhq/axiom-honeycomb-proxy/releases/download/v0.5.0/axiom-honeycomb-proxy_0.5.0_linux_arm64.tar.gz"
-      sha256 "b1dd18a1de323bae98b74504ce4cfbc98f3de07ddeb5b5bc701cf25d365b5e11"
-    end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/axiomhq/axiom-honeycomb-proxy/releases/download/v0.5.0/axiom-honeycomb-proxy_0.5.0_linux_armv6.tar.gz"
-      sha256 "6a1c447d8347d0eec01cf035b1c6f583d50957e2da71b97a4b9854cf095f7086"
+      url "https://github.com/axiomhq/axiom-honeycomb-proxy/releases/download/v0.6.0/axiom-honeycomb-proxy_0.6.0_linux_arm64.tar.gz"
+      sha256 "d4a31f2fb6a147f7150361406c976ef58c2de117ccd9d1c33e441a8b7e2b6beb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/axiomhq/axiom-honeycomb-proxy/releases/download/v0.5.0/axiom-honeycomb-proxy_0.5.0_linux_amd64.tar.gz"
-      sha256 "361d80343d3ec90560702c245370c0ef5ebebd9c8caa2b31fb700cad67222f6a"
+      url "https://github.com/axiomhq/axiom-honeycomb-proxy/releases/download/v0.6.0/axiom-honeycomb-proxy_0.6.0_linux_amd64.tar.gz"
+      sha256 "ce49a91e531e95d89fa0781ed71896c48a5aa961de8bf69b880d0553015a27d4"
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/axiomhq/axiom-honeycomb-proxy/releases/download/v0.6.0/axiom-honeycomb-proxy_0.6.0_linux_armv6.tar.gz"
+      sha256 "c0028a1b921c23f805a26213cd41fd319d66244f4efff18bb907338698004925"
     end
   end
 
