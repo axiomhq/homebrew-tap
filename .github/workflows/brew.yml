@@ -19,7 +19,8 @@ jobs:
           # - macos-latest
         formula:
           - axiom-honeycomb-proxy
-          - axiom-loki-proxy
+          - axiom-loki-multiplexer
+          - axiom-segment-webhook
           - axiom-syslog-proxy
           - axiom
     runs-on: ${{ matrix.os }}
