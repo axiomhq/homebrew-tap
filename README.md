@@ -48,7 +48,7 @@ please fill an issue in the upstream repository.
 
 ## License
 
-&copy; Axiom, Inc., 2021
+&copy; Axiom, Inc., 2022
 
 Formulas are licensed individually, depending on the license their upstream
 repository declares. Check the `<formula>.rb` files.
