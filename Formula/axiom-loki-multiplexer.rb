@@ -5,21 +5,21 @@
 class AxiomLokiMultiplexer < Formula
   desc "Loki powered log ingestion by multiplexer for Axiom"
   homepage "https://axiom.co"
-  version "0.6.0"
+  version "0.6.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/axiomhq/axiom-loki-multiplexer/releases/download/v0.6.0/axiom-loki-multiplexer_0.6.0_darwin_arm64.tar.gz"
-      sha256 "f48e5778175aaeaaa935986830e9af4a4e1a23a6ce7b064eaed9cdb9af988e69"
+    if Hardware::CPU.intel?
+      url "https://github.com/axiomhq/axiom-loki-multiplexer/releases/download/v0.6.1/axiom-loki-multiplexer_0.6.1_darwin_amd64.tar.gz"
+      sha256 "780e64810ad49ec9668c1c47b4b5c2fa98676adec888812c02cb15c0938128e9"
 
       def install
         bin.install "axiom-loki-multiplexer"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/axiomhq/axiom-loki-multiplexer/releases/download/v0.6.0/axiom-loki-multiplexer_0.6.0_darwin_amd64.tar.gz"
-      sha256 "2d3f78bdf3a2a2199b95fa1bad6e202ccec97012986b22deaebcabc76750dc6f"
+    if Hardware::CPU.arm?
+      url "https://github.com/axiomhq/axiom-loki-multiplexer/releases/download/v0.6.1/axiom-loki-multiplexer_0.6.1_darwin_arm64.tar.gz"
+      sha256 "b286a4f1fb7aa3cbf69d6a92ec784b566d5673c292b6b26681088bbed1bfb905"
 
       def install
         bin.install "axiom-loki-multiplexer"
@@ -29,24 +29,24 @@ class AxiomLokiMultiplexer < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/axiomhq/axiom-loki-multiplexer/releases/download/v0.6.0/axiom-loki-multiplexer_0.6.0_linux_arm64.tar.gz"
-      sha256 "b3872682030ccbbc0716ae2c08550634556f38897f902efcab511415f6ba3505"
+      url "https://github.com/axiomhq/axiom-loki-multiplexer/releases/download/v0.6.1/axiom-loki-multiplexer_0.6.1_linux_arm64.tar.gz"
+      sha256 "911d03022c93571311bb6ee93bc13ddf06e4abffa58ba678565577ea3a333827"
 
       def install
         bin.install "axiom-loki-multiplexer"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/axiomhq/axiom-loki-multiplexer/releases/download/v0.6.0/axiom-loki-multiplexer_0.6.0_linux_amd64.tar.gz"
-      sha256 "5ec219893627dc87a69277b378f660f9e72b675e5ce486936d2c245fbdd5cef9"
+      url "https://github.com/axiomhq/axiom-loki-multiplexer/releases/download/v0.6.1/axiom-loki-multiplexer_0.6.1_linux_amd64.tar.gz"
+      sha256 "b7e58df38e93ed75b49cdc63937673763dacffb4d83638ccddd08d155421291f"
 
       def install
         bin.install "axiom-loki-multiplexer"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/axiomhq/axiom-loki-multiplexer/releases/download/v0.6.0/axiom-loki-multiplexer_0.6.0_linux_armv6.tar.gz"
-      sha256 "5ecfec1e47164f68c1fc305bf29b274e7c0695091ae8eed4d752bc8138833b3f"
+      url "https://github.com/axiomhq/axiom-loki-multiplexer/releases/download/v0.6.1/axiom-loki-multiplexer_0.6.1_linux_armv6.tar.gz"
+      sha256 "ff7136dae40af7bf05c36253f9b390bab6889f48aa2de45d39ebad8ac7ec4e1e"
 
       def install
         bin.install "axiom-loki-multiplexer"
