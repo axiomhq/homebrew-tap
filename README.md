@@ -2,7 +2,7 @@
 
 > Homebrew formulas for Axiom, Inc. open source projects.
 
-[![Brew Workflow][brew_workflow_badge]][brew_workflow]
+[![Brew Workflow][workflow_badge]][workflow]
 
 ---
 
@@ -48,12 +48,12 @@ please fill an issue in the upstream repository.
 
 ## License
 
-&copy; Axiom, Inc., 2022
+&copy; Axiom, Inc., 2023
 
 Formulas are licensed individually, depending on the license their upstream
 repository declares. Check the `<formula>.rb` files.
 
 <!-- Badges -->
 
-[brew_workflow]: https://github.com/axiomhq/homebrew-tap/actions/workflows/brew.yml
-[brew_workflow_badge]: https://img.shields.io/github/workflow/status/axiomhq/homebrew-tap/brew?style=flat-square
+[workflow]: https://github.com/axiomhq/homebrew-tap/actions/workflows/brew.yaml
+[workflow_badge]: https://img.shields.io/github/actions/workflow/status/axiomhq/homebrew-tap/brew.yaml?branch=main&ghcache=unused
