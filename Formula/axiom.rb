@@ -5,13 +5,13 @@
 class Axiom < Formula
   desc "Powerful log analytics from the comfort of your command-line"
   homepage "https://axiom.co"
-  version "0.11.0"
+  version "0.11.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/axiomhq/cli/releases/download/v0.11.0/axiom_0.11.0_darwin_arm64.tar.gz"
-      sha256 "1a4eac87beb0a86a2efbd4f56aaf6b025d40109b4f6be267b2cf7c19a8b8dfb9"
+      url "https://github.com/axiomhq/cli/releases/download/v0.11.1/axiom_0.11.1_darwin_arm64.tar.gz"
+      sha256 "71b405b12a2cd459bb52216fcf2f484768fbd4734d426711f0673b8dee780b04"
 
       def install
         bin.install "axiom"
@@ -22,8 +22,8 @@ class Axiom < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/axiomhq/cli/releases/download/v0.11.0/axiom_0.11.0_darwin_amd64.tar.gz"
-      sha256 "33db65f9043db5dbd25335aba3d87d23586dcd58ef9745ebfc32431cdedcfb96"
+      url "https://github.com/axiomhq/cli/releases/download/v0.11.1/axiom_0.11.1_darwin_amd64.tar.gz"
+      sha256 "19600ddc0cb1be5528f9a4ee91b347d9bf2acb8f772400872de7e73ae5d1feb0"
 
       def install
         bin.install "axiom"
@@ -36,9 +36,9 @@ class Axiom < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/axiomhq/cli/releases/download/v0.11.0/axiom_0.11.0_linux_arm64.tar.gz"
-      sha256 "73164f6761ff64f4e60a8cd394e0875e0f08510bb2444758c18f01fad52d8853"
+    if Hardware::CPU.intel?
+      url "https://github.com/axiomhq/cli/releases/download/v0.11.1/axiom_0.11.1_linux_amd64.tar.gz"
+      sha256 "6a96f509ab521f9f1cc2978970a7082af0c81625b0e6ac63daa11518d1f183ca"
 
       def install
         bin.install "axiom"
@@ -48,9 +48,9 @@ class Axiom < Formula
         (zsh_completion/"_axiom").write `#{bin}/axiom completion zsh`
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/axiomhq/cli/releases/download/v0.11.0/axiom_0.11.0_linux_amd64.tar.gz"
-      sha256 "151e2c9d3cdcee6453c57e799697f81cdbd7e9fdc96c04a8c91fa3f827d3b6bf"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/axiomhq/cli/releases/download/v0.11.1/axiom_0.11.1_linux_arm64.tar.gz"
+      sha256 "b55b60cd24d0e431fddf429183db5dd1036ff88c71c00e124b3ec8c7b6eef02a"
 
       def install
         bin.install "axiom"
@@ -61,8 +61,8 @@ class Axiom < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/axiomhq/cli/releases/download/v0.11.0/axiom_0.11.0_linux_armv6.tar.gz"
-      sha256 "376826961a4f8a6dd07385c43eaa7a21a15841ec9dde7309e1af42a4b46aa28b"
+      url "https://github.com/axiomhq/cli/releases/download/v0.11.1/axiom_0.11.1_linux_armv6.tar.gz"
+      sha256 "c9a60a1651c1affb21a6b4e58c52ddb7c7afc815735e40c4761defcb380d220e"
 
       def install
         bin.install "axiom"
