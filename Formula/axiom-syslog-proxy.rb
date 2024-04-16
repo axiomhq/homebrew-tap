@@ -5,21 +5,21 @@
 class AxiomSyslogProxy < Formula
   desc "Syslog ingestion by proxy for Axiom"
   homepage "https://axiom.co"
-  version "0.7.1"
+  version "0.7.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/axiomhq/axiom-syslog-proxy/releases/download/v0.7.1/axiom-syslog-proxy_0.7.1_darwin_amd64.tar.gz"
-      sha256 "8ba39c2963dde2faccc3e4d36c889b9483ab56abc194808b2a454e6e64cd6880"
+      url "https://github.com/axiomhq/axiom-syslog-proxy/releases/download/v0.7.2/axiom-syslog-proxy_0.7.2_darwin_amd64.tar.gz"
+      sha256 "6fc76368f9a072c442c0ed80a2c29542ef1410c5be1ed0401bf28689fc474fec"
 
       def install
         bin.install "axiom-syslog-proxy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/axiomhq/axiom-syslog-proxy/releases/download/v0.7.1/axiom-syslog-proxy_0.7.1_darwin_arm64.tar.gz"
-      sha256 "c1a2bd18eed936e6a8531531cc4adc6f44790362e66d2a2d45769ea18916e792"
+      url "https://github.com/axiomhq/axiom-syslog-proxy/releases/download/v0.7.2/axiom-syslog-proxy_0.7.2_darwin_arm64.tar.gz"
+      sha256 "e758d6343275cedc6d43fefeb4f4c249634cecb8fd3b845abf6ab53c43715062"
 
       def install
         bin.install "axiom-syslog-proxy"
@@ -29,24 +29,24 @@ class AxiomSyslogProxy < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/axiomhq/axiom-syslog-proxy/releases/download/v0.7.1/axiom-syslog-proxy_0.7.1_linux_amd64.tar.gz"
-      sha256 "e0a21b0bd137baff76534d0cf694ecf2b69452a33f1b3ec5a783d8d583e3b24d"
+      url "https://github.com/axiomhq/axiom-syslog-proxy/releases/download/v0.7.2/axiom-syslog-proxy_0.7.2_linux_amd64.tar.gz"
+      sha256 "67efecd9083b1254f9c818a2c5abfab58594fa1ad99d9060f874884db99b2f8c"
 
       def install
         bin.install "axiom-syslog-proxy"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/axiomhq/axiom-syslog-proxy/releases/download/v0.7.1/axiom-syslog-proxy_0.7.1_linux_armv6.tar.gz"
-      sha256 "0d7d86bd04f8a205250dbdfc705e138a017df9e343b1b3e25a212efcfff0b453"
+      url "https://github.com/axiomhq/axiom-syslog-proxy/releases/download/v0.7.2/axiom-syslog-proxy_0.7.2_linux_armv6.tar.gz"
+      sha256 "72fd6e0f917b7e384071c23d542b87bf3010e1e34ce49399ae14319c6c223912"
 
       def install
         bin.install "axiom-syslog-proxy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/axiomhq/axiom-syslog-proxy/releases/download/v0.7.1/axiom-syslog-proxy_0.7.1_linux_arm64.tar.gz"
-      sha256 "1008c680c21608665d4294f827d96093315fde8903109c5cf37e11351c40ff2a"
+      url "https://github.com/axiomhq/axiom-syslog-proxy/releases/download/v0.7.2/axiom-syslog-proxy_0.7.2_linux_arm64.tar.gz"
+      sha256 "99b690a8d32fb766da610175ebdb303c633b23b97b72fecdf9564f643ff657d9"
 
       def install
         bin.install "axiom-syslog-proxy"
