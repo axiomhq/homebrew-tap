@@ -1,6 +1,6 @@
-# Homebrew Formulas
+# Homebrew Casks and Formulas
 
-> Homebrew formulas for Axiom, Inc. open source projects.
+> Homebrew Casks and Formulas for Axiom, Inc. open source projects.
 
 [![Brew Workflow][workflow_badge]][workflow]
 
@@ -15,43 +15,48 @@
 
 ## Introduction
 
-This repository is a collection of Homebrew formulas for some of the Axiom, Inc.
-open source projects, a so called [Tap][1].
+This repository is a collection of Homebrew Casks and Formulas for some of the
+Axiom, Inc. open source projects, a so called [Tap][1].
 
-  [1]: https://docs.brew.sh/Taps
+[1]: https://docs.brew.sh/Taps
 
 ## Usage
 
-There are two ways to use the formulas in this repository.
+There are two ways to use the Casks and Formulas in this repository.
 
 ### Tap installation
 
-Install the tap first and install the formula like any other core formula.
+Install the tap first and install the Cask or Formula like any other core
+Cask or Formula.
 
 ```shell
- brew tap axiomhq/tap
- brew install <formula>
+brew tap axiomhq/tap
+brew install --cask <cask>
+# or
+brew install <formula>
 ```
 
 ### Direct installation
 
-Directly install the formula from the tap before installing the tap first.
+Directly install the Cask or Formula from the tap before installing the tap
+first.
 
 ```shell
- brew install axiomhq/tap/<formula>
+brew install --cask axiomhq/tap/<cask>
+brew install axiomhq/tap/<formula>
 ```
 
 ## Contributing
 
-Formulas are mostly auto-committed to this repository. If you find any issues,
-please fill an issue in the upstream repository.
+Casks and Formulas are mostly auto-committed to this repository. If you find any
+issues, please fill an issue in the upstream repository.
 
 ## License
 
 &copy; Axiom, Inc., 2023
 
-Formulas are licensed individually, depending on the license their upstream
-repository declares. Check the `<formula>.rb` files.
+Casks and Formulas are licensed individually, depending on the license their
+upstream repository declares.
 
 <!-- Badges -->
 
