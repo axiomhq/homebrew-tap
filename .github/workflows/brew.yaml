@@ -9,30 +9,62 @@ on:
       - main
 
 jobs:
-  build:
-    name: build
+  test:
+    name: Test
     strategy:
       fail-fast: false
       matrix:
-        os:
-          - ubuntu-latest
-          # - macos-latest
-        formula:
-          - axiom-honeycomb-proxy
-          - axiom-loki-multiplexer
-          - axiom-segment-webhook
-          - axiom-syslog-proxy
-          - axiom
+        include:
+          - os: macos-latest
+            type: cask
+            package: axiom
+          - os: ubuntu-latest
+            type: formula
+            package: axiom-honeycomb-proxy
+          - os: macos-latest
+            type: formula
+            package: axiom-honeycomb-proxy
+          - os: ubuntu-latest
+            type: formula
+            package: axiom-loki-multiplexer
+          - os: macos-latest
+            type: formula
+            package: axiom-loki-multiplexer
+          - os: ubuntu-latest
+            type: formula
+            package: axiom-segment-webhook
+          - os: macos-latest
+            type: formula
+            package: axiom-segment-webhook
+          - os: ubuntu-latest
+            type: formula
+            package: axiom-syslog-proxy
+          - os: macos-latest
+            type: formula
+            package: axiom-syslog-proxy
     runs-on: ${{ matrix.os }}
     env:
-      HOMEBREW_CC: gcc
+      HOMEBREW_NO_AUTO_UPDATE: 1
+      HOMEBREW_NO_INSTALL_CLEANUP: 1
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Set up Homebrew
-        uses: Homebrew/actions/setup-homebrew@master
-      - name: Install Formula ${{ matrix.formula }}
+      - uses: Homebrew/actions/setup-homebrew@main
+        id: set-up-homebrew
+      - uses: actions/cache@v4
+        id: cache
+        with:
+          path: ${{ steps.set-up-homebrew.outputs.gems-path }}
+          key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ${{ runner.os }}-rubygems-
+      - if: steps.cache.outputs.cache-hit != 'true'
+        run: brew install-bundler-gems
+      - name: Test Formula
+        if: matrix.type == 'formula'
         run: |
-          brew audit ${{ matrix.formula }}
-          brew install -v ${{ matrix.formula }}
-          brew test ${{ matrix.formula }}
+          brew audit ${{ matrix.package }}
+          brew install -v ${{ matrix.package }}
+          brew test ${{ matrix.package }}
+      - name: Test Cask
+        if: matrix.type == 'cask'
+        run: |
+          brew install -v --cask ${{ matrix.package }}
+          brew list --cask ${{ matrix.package }}

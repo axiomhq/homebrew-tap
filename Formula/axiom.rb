@@ -5,8 +5,10 @@
 class Axiom < Formula
   desc "Powerful log analytics from the comfort of your command-line"
   homepage "https://axiom.co"
-  version "0.14.2"
+  version "0.14.3"
   license "MIT"
+
+  disable! date: "2025-08-20", because: "the cask should be used now instead", replacement_cask: "axiom"
 
   on_macos do
     if Hardware::CPU.intel?
