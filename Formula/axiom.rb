@@ -8,7 +8,7 @@ class Axiom < Formula
   version "0.14.3"
   license "MIT"
 
-  disable! date: "2025-08-20", because: "the cask should be used now instead", replacement_cask: "axiom"
+  disable! date: "2025-08-21", because: "has been replaced by the cask", replacement_cask: "axiom"
 
   on_macos do
     if Hardware::CPU.intel?
