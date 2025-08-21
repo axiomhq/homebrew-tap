@@ -2,26 +2,59 @@
 cask "axiom" do
   desc "Powerful log analytics from the comfort of your command-line"
   homepage "https://axiom.co"
-  version "0.14.4"
+  version "0.14.5"
 
   livecheck do
     skip "Auto-generated on release."
   end
 
   binary "axiom"
-  manpage "man/axiom*.1"
+  manpage "man/axiom.1"
+  manpage "man/axiom-annotation.1"
+  manpage "man/axiom-annotation-create.1"
+  manpage "man/axiom-annotation-delete.1"
+  manpage "man/axiom-annotation-list.1"
+  manpage "man/axiom-annotation-update.1"
+  manpage "man/axiom-auth.1"
+  manpage "man/axiom-auth-login.1"
+  manpage "man/axiom-auth-logout.1"
+  manpage "man/axiom-auth-select.1"
+  manpage "man/axiom-auth-status.1"
+  manpage "man/axiom-auth-switch-org.1"
+  manpage "man/axiom-auth-update-token.1"
+  manpage "man/axiom-completion.1"
+  manpage "man/axiom-completion-bash.1"
+  manpage "man/axiom-completion-fish.1"
+  manpage "man/axiom-completion-powershell.1"
+  manpage "man/axiom-completion-zsh.1"
+  manpage "man/axiom-config.1"
+  manpage "man/axiom-config-edit.1"
+  manpage "man/axiom-config-export.1"
+  manpage "man/axiom-config-get.1"
+  manpage "man/axiom-config-set.1"
+  manpage "man/axiom-dataset.1"
+  manpage "man/axiom-dataset-create.1"
+  manpage "man/axiom-dataset-delete.1"
+  manpage "man/axiom-dataset-list.1"
+  manpage "man/axiom-dataset-trim.1"
+  manpage "man/axiom-dataset-update.1"
+  manpage "man/axiom-ingest.1"
+  manpage "man/axiom-query.1"
+  manpage "man/axiom-stream.1"
+  manpage "man/axiom-version.1"
+  manpage "man/axiom-web.1"
   bash_completion "completions/axiom.bash"
   zsh_completion "completions/_axiom"
   fish_completion "completions/axiom.fish"
 
   on_macos do
     on_intel do
-      url "https://github.com/axiomhq/cli/releases/download/v0.14.4/axiom_0.14.4_darwin_amd64_homebrew.tar.gz"
-      sha256 "58d5c7158a87a22d1bb2c3333d320a9ea5b3cf99b1ddfe015fa5c14236c90788"
+      url "https://github.com/axiomhq/cli/releases/download/v0.14.5/axiom_0.14.5_darwin_amd64_homebrew.tar.gz"
+      sha256 "77369e2400cba2cc495a4a973e7aaf7e3c48c63520860e9a6446a993d1857792"
     end
     on_arm do
-      url "https://github.com/axiomhq/cli/releases/download/v0.14.4/axiom_0.14.4_darwin_arm64_homebrew.tar.gz"
-      sha256 "2b70207ae4aad918aa26e80d99509be578966662a95d481ef8beb5149469a548"
+      url "https://github.com/axiomhq/cli/releases/download/v0.14.5/axiom_0.14.5_darwin_arm64_homebrew.tar.gz"
+      sha256 "f0a29e495b73630348449a8d0bd60feebd3639b0b54e284ee22e4d899c42f067"
     end
   end
 
