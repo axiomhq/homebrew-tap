@@ -2,7 +2,7 @@
 cask "axiom" do
   desc "Powerful log analytics from the comfort of your command-line"
   homepage "https://axiom.co"
-  version "0.14.6"
+  version "0.14.7"
 
   livecheck do
     skip "Auto-generated on release."
@@ -49,12 +49,12 @@ cask "axiom" do
 
   on_macos do
     on_intel do
-      url "https://github.com/axiomhq/cli/releases/download/v0.14.6/axiom_0.14.6_darwin_amd64_homebrew.tar.gz"
-      sha256 "af58382ee760426141863a5eed73574339f9df1952e785e9c3e2abb94d889ce1"
+      url "https://github.com/axiomhq/cli/releases/download/v0.14.7/axiom_0.14.7_darwin_amd64_homebrew.tar.gz"
+      sha256 "31dcf90888d13413291970b4b453d63ed9b0aff0fe655ef027620ae3a0ccc079"
     end
     on_arm do
-      url "https://github.com/axiomhq/cli/releases/download/v0.14.6/axiom_0.14.6_darwin_arm64_homebrew.tar.gz"
-      sha256 "3dbb459c1f9e439c16881ec2a6f505c7a8ba306edb17713a832d49aaeaa5ccce"
+      url "https://github.com/axiomhq/cli/releases/download/v0.14.7/axiom_0.14.7_darwin_arm64_homebrew.tar.gz"
+      sha256 "68206ea9cde042706fafd9d99f6907732a92d615b78abae96af6acd8e9766190"
     end
   end
 
