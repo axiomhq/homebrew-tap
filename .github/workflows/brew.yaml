@@ -42,6 +42,12 @@ jobs:
           - os: macos-latest
             type: formula
             package: axiom-syslog-proxy
+          - os: ubuntu-latest
+            type: formula
+            package: axiom-hostmetrics
+          - os: macos-latest
+            type: formula
+            package: axiom-hostmetrics
     runs-on: ${{ matrix.os }}
     env:
       HOMEBREW_NO_AUTO_UPDATE: 1
